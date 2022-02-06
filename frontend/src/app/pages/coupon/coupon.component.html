@@ -1,0 +1,54 @@
+<div class="row show-grid">
+  <div class="col-md-3">
+    <div>
+      <nb-card status="info">
+        <nb-card-header>Coupons Available</nb-card-header>
+        <nb-card-body>{{coupons}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing Tomorrow</nb-card-header>
+        <nb-card-body>{{expiration1}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing 5 days</nb-card-header>
+        <nb-card-body>{{expiration5}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing Now</nb-card-header>
+        <nb-card-body>{{expiration0}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>
+<nb-card>
+  <nb-card-header>
+    Coupon Table
+  </nb-card-header>
+
+  <nb-card-body>
+    <input #search class="search" type="text" placeholder="Search.." (keydown.enter)="onSearch(search.value)" />
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (createConfirm)="onCreateConfirm($event)"
+      (editConfirm)="onEditConfirm($event)"
+      (deleteConfirm)="onDeleteConfirm($event)"
+    >
+    </ng2-smart-table>
+    <div class="upload-section">
+      <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" /> 
+    </div>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,68 @@
+<div class="row show-grid">
+  <div class="col-md-4">
+      <nb-card status="primary">
+        <nb-card-header>Total Accounts</nb-card-header>
+        <nb-card-body>{{activeAccounts + blockAccounts}}</nb-card-body>
+      </nb-card>
+      <nb-card status="primary">
+        <nb-card-header>Total Songs</nb-card-header>
+        <nb-card-body>200</nb-card-body>
+      </nb-card>
+  </div>
+  <div class="col-md-4">
+    <div>
+      <nb-card status="success">
+        <nb-card-header>Active Accounts Available Now</nb-card-header>
+        <nb-card-body>{{activeAccounts}}</nb-card-body>
+      </nb-card>
+      <nb-card status="success">
+        <nb-card-header>Played Today</nb-card-header>
+        <nb-card-body>197</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Error Accounts</nb-card-header>
+        <nb-card-body>{{blockAccounts}}</nb-card-body>
+      </nb-card>
+      <nb-card status="info">
+        <nb-card-header>Played This Week</nb-card-header>
+        <nb-card-body>3</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="info">
+        <nb-card-header>Coupons Available</nb-card-header>
+        <nb-card-body>{{coupons}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing Now</nb-card-header>
+        <nb-card-body>{{expiration0}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing Tomorrow</nb-card-header>
+        <nb-card-body>{{expiration1}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <nb-card status="danger">
+        <nb-card-header>Coupons Missing 5 days</nb-card-header>
+        <nb-card-body>{{expiration5}}</nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>
